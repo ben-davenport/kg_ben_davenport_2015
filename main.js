@@ -33,20 +33,20 @@ function mappingIt (s1, s2){
         return false;
     }
     else{
-        for(let x=0; x<s1.length; x++){
-            let newKey = s1[x];
-            let newValue = s2[x];
+    for(let x=0; x<s1.length; x++){
+        let newKey = s1[x];
+        let newValue = s2[x];
 
-            if (!mappedChars[newKey]){
-                mappedChars[newKey] = newValue;
-            }
-            else if (mappedChars[newKey] !== newValue){
-                console.log("false");
-                return false;
-            }
-        };
+        if (!mappedChars[newKey]){
+            mappedChars[newKey] = newValue;
+        }
+        else if (mappedChars[newKey] !== newValue){
+            console.log("false");
+            return false;
+        }
+    }
     console.log('true')
     return true
-    };
+};
 }
 mappingIt(args1, args2)
